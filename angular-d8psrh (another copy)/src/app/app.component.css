@@ -1,0 +1,38 @@
+.blue-logo {
+  color: #1A73E8;
+  font-size: 45px;
+  height: 45px;
+  width: 45px;
+  padding-left: 15px;
+  text-shadow: 2px 2px 4px #00000045;
+}
+
+.app-name{
+  /* font-size: 22px; */
+  line-height: 24px;
+  padding-left: 15px;
+  color: #5f6368;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* .example-toolbar{
+  padding-top: 10px;
+} */
+
+mat-sidenav-content{
+  padding-left: 50px;
+}
+
+mat-list-item mat-icon {
+  color: #5f6368;
+  padding-right: 10px;
+}
+
+create-contact-btn{
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+  margin: 5px 50px;
+}
+
+mat-sidenav-container {
+  height: 90vh;
+}

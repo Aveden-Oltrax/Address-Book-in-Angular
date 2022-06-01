@@ -1,0 +1,15 @@
+<h2>MY CONTACTS</h2>
+
+<ul class="heroes">
+  <li *ngFor="let contact of contacts">
+    <a routerLink="/detail/{{contact.id}}" >
+      <span class="badge"> {{ contact.id }}</span>
+      <span class="name"> {{ contact.name }}</span>
+      <!-- <span class="name"> {{ contact.mobile }}</span>
+      <span class="name"> {{ contact.email }}</span> -->
+      
+    </a>
+    <button type="button" class="delete" title="delete contact"  (click)="delete(contact)">x</button>
+  </li>
+</ul>
+

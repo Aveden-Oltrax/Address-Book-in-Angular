@@ -1,0 +1,70 @@
+<!-- <h1>{{ title }}</h1>
+
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/contacts">List Contacts</a>
+</nav>
+
+<router-outlet></router-outlet>
+<app-messages></app-messages> -->
+
+<mat-toolbar class="example-toolbar">
+  <button mat-icon-button (click)="snav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <mat-icon class="blue-logo">account_circle</mat-icon>
+  <span class="app-name">{{ title }}</span>
+  <span><app-contact-search></app-contact-search></span>
+</mat-toolbar>
+
+<mat-sidenav-container
+  class="example-sidenav-container"
+  [style.marginTop.px]="mobileQuery.matches ? 56 : 0"
+>
+  <mat-sidenav
+    #snav
+    [mode]="mobileQuery.matches ? 'over' : 'side'"
+    [fixedInViewport]="mobileQuery.matches"
+    fixedTopGap="56"
+  >
+    -- Side Nav --
+    <br />
+    <br />
+
+    <mat-nav-list>
+
+      <mat-list-item routerLink="/addcontact">
+        <div class="create-contact-btn">
+        <mat-icon> add </mat-icon> Create Contact
+      </div>
+      </mat-list-item>
+
+      <mat-divider></mat-divider>
+
+      <mat-list-item routerLink="/dashboard">
+        <mat-icon>dashboard</mat-icon> Dashboard
+      </mat-list-item>
+
+      <mat-list-item routerLink="/contacts">
+        <mat-icon> list </mat-icon> List Contacts
+      </mat-list-item>
+
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <mat-icon>cloud_download</mat-icon> Import
+      </mat-list-item>
+      <mat-list-item> <mat-icon>cloud_upload</mat-icon> Export </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <!-- <nav>
+      <a routerLink="/dashboard">Dashboard</a>
+      <a routerLink="/contacts">List Contacts</a>
+    </nav> -->
+
+    <router-outlet></router-outlet>
+    <app-messages></app-messages>
+  </mat-sidenav-content>
+</mat-sidenav-container>

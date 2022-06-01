@@ -1,0 +1,28 @@
+<p>add-new-contact works!</p>
+<div>
+  <label for="new-contact">Name: </label>
+  <input type="text" id="new-contact" #contactName />
+
+  <label for="new-contact-mobile">Mobile No.: </label>
+  <input type="tel" id="new-contact-mobile" #contactMobile placeholder="12345-67890" pattern="[0-9]{5}-[0-9]{5}" />
+
+  <label for="new-contact-email">Email: </label>
+  <input type="email" id="new-contact-email" #contactEmail />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button
+    type="button"
+    class="add-button"
+    (click)="
+      add(
+        contactName.value,
+        contactMobile.value,
+        contactEmail.value
+      ); contactName.value=''; 
+      contactMobile.value='';
+      contactEmail.value=''
+    "
+  >
+  Save Contact
+</button>
+</div>

@@ -1,0 +1,9 @@
+<!-- <app-contact-search></app-contact-search> -->
+
+<h2>Recents</h2>
+<div class="heroes-menu">
+  <a *ngFor="let contact of contacts" routerLink="/detail/{{contact.id}}">
+    {{ contact.name }}
+  </a>
+</div>
+

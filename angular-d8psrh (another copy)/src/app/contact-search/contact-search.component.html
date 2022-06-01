@@ -1,0 +1,15 @@
+<div id="search-box">
+  <span><mat-icon> search </mat-icon></span>
+  <span><input matInput #searchBox  (input)="search(searchBox.value)" placeholder="Search" /></span>
+</div>
+
+<div class="search-result-containe">
+  <ul class="search-result">
+    <li *ngFor="let contact of contacts$ | async" >
+      <a routerLink="/detail/{{contact.id}}">
+        {{contact.name}}
+      </a>
+    </li>
+  </ul>
+</div>
+
